@@ -4,9 +4,9 @@ const UserSchema = new mongoose.Schema(
     {
         username: {
             type: String,
-            require: true,
+            required: true,
             unique: true,
-          },
+        },
         email: {
             type: String,
             required: true,
@@ -16,17 +16,15 @@ const UserSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        mobile: {
+        mobileNo: {
             type: String,
             unique: true,
+            required: true,
         },
         isAdmin: {
             type: Boolean,
             default: false,
         },
-        address:{
-            type: String,
-        }
     },
     { timestamps: true }
 );
